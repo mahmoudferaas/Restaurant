@@ -1,4 +1,5 @@
 ﻿using Brightskies.Restaurant.Application.Reservations.Commands.Create;
+using Brightskies.Restaurant.Application.Reservations.Queries.GetAll;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -13,6 +14,22 @@ namespace Brightskies.Restaurant.Presentation.Controllers
             try
             {
                 var output = await Mediator.Send(command);
+
+                return Ok(output);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            try
+            {
+                var output = await Mediator.Send(new GetAllReservationQuery());
 
                 return Ok(output);
             }
