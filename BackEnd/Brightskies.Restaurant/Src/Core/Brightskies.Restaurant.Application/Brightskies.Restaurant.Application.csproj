@@ -12,6 +12,7 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" PrivateAssets="none" />
 		<PackageReference Include="Microsoft.Extensions.Localization" Version="5.0.5" PrivateAssets="none" />
 		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="5.0.5" PrivateAssets="none" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.10.1" />
 		<ProjectReference Include="..\..\..\Src\Core\Brightskies.Restaurant.Domain\Brightskies.Restaurant.Domain.csproj" />
 	</ItemGroup>
 </Project>
