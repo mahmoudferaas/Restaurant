@@ -8,7 +8,7 @@ namespace Brightskies.Restaurant.Presentation.Controllers
 {
     public class ReservationsController : BaseController
     {
-        [HttpPost]
+        [HttpPost("Create")]
         public async Task<IActionResult> Create([FromBody] CreateReservationCommand command)
         {
             try
@@ -24,7 +24,7 @@ namespace Brightskies.Restaurant.Presentation.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll()
         {
             try

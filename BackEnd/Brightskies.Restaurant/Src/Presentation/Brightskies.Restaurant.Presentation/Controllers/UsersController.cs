@@ -45,12 +45,12 @@ namespace Brightskies.Restaurant.Presentation.Controllers
             }
         }
 
-        [HttpPost("GetAllUsers")]
-        public async Task<IActionResult> GetAll([FromBody] GetAllUsersQuery query)
+        [HttpGet("GetAllUsers")]
+        public async Task<IActionResult> GetAll()
         {
             try
             {
-                var output = await Mediator.Send(query);
+                var output = await Mediator.Send(new GetAllUsersQuery());
 
                 return Ok(output);
             }
