@@ -8,7 +8,7 @@ namespace Brightskies.Restaurant.Presentation.Controllers
 {
     public class ItemsController : BaseController
     {
-        [HttpPost("Create")]
+        [HttpPost("CreateItem")]
         public async Task<IActionResult> Create([FromBody] CreateItemCommand command)
         {
             try
@@ -24,7 +24,7 @@ namespace Brightskies.Restaurant.Presentation.Controllers
             }
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet("GetAllItems")]
         public async Task<IActionResult> GetAll()
         {
             try
