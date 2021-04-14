@@ -1,4 +1,5 @@
 using AutoMapper;
+using Brightskies.Restaurant.Application.Items.Commands.Create;
 using Brightskies.Restaurant.Application.Reservations.Commands.Create;
 using Brightskies.Restaurant.Application.Reservations.Dtos;
 using Brightskies.Restaurant.Application.Users.Comands.Create;
@@ -18,6 +19,7 @@ namespace Brightskies.Restaurant.Application.Common.Mappings
             CreateMap<CreateUserCommand, User>().ReverseMap();
             CreateMap<LoginOutput, User>().ReverseMap();
             CreateMap<UserOutput, User>().ReverseMap();
+            CreateMap<CreateItemCommand, Item>().ReverseMap();
         }
     }
 }
