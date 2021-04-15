@@ -20,6 +20,7 @@ namespace Brightskies.Restaurant.Application.Common.Mappings
             CreateMap<LoginOutput, User>().ReverseMap();
             CreateMap<UserOutput, User>().ReverseMap();
             CreateMap<CreateItemCommand, Item>().ReverseMap();
+            CreateMap<MenuSelectionDto, MenuSelection>().ReverseMap();
         }
     }
 }

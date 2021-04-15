@@ -11,8 +11,14 @@ namespace Brightskies.Restaurant.Application.Users.Comands.Create
         public CreateUserCommandValidators(IRestaurantDbContext context)
         {
             _context = context;
-            RuleFor(x => x.Email).Must(UniqueEmail).WithMessage("This Email already exists.").EmailAddress();
+            RuleFor(x => x.Email).Must(UniqueEmail).WithMessage("This Email already exists.");
+            
+        }
+
+        public CreateUserCommandValidators()
+        {
             RuleFor(x => x.Name).NotEmpty();
+            RuleFor(x => x.Email).NotEmpty().EmailAddress();
             RuleFor(x => x.Password).NotEmpty().MinimumLength(5);
         }
 

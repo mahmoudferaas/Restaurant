@@ -26,8 +26,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brightskies.Restaurant.Pers
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brightskies.Restaurant.Application.UnitTest", "Test\Brightskies.Restaurant.Application.UnitTest\Brightskies.Restaurant.Application.UnitTest.csproj", "{85BC25FA-F984-43E0-8440-DFD52CD81101}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brightskies.Restaurant.Domain.UnitTest", "Test\Brightskies.Restaurant.Domain.UnitTest\Brightskies.Restaurant.Domain.UnitTest.csproj", "{42E6245D-B750-45CF-B86D-FB356BC5B159}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brightskies.Restaurant.Common", "Src\Common\Brightskies.Restaurant.Common\Brightskies.Restaurant.Common.csproj", "{37F78A8D-6F6A-447A-92D5-99AA993135E2}"
 EndProject
 Global
@@ -56,10 +54,6 @@ Global
 		{85BC25FA-F984-43E0-8440-DFD52CD81101}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85BC25FA-F984-43E0-8440-DFD52CD81101}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85BC25FA-F984-43E0-8440-DFD52CD81101}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42E6245D-B750-45CF-B86D-FB356BC5B159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42E6245D-B750-45CF-B86D-FB356BC5B159}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42E6245D-B750-45CF-B86D-FB356BC5B159}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42E6245D-B750-45CF-B86D-FB356BC5B159}.Release|Any CPU.Build.0 = Release|Any CPU
 		{37F78A8D-6F6A-447A-92D5-99AA993135E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{37F78A8D-6F6A-447A-92D5-99AA993135E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37F78A8D-6F6A-447A-92D5-99AA993135E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -78,7 +72,6 @@ Global
 		{5D974378-CDD9-45F7-97C6-B0694501F123} = {CAA85A0C-F2D2-40A0-87A1-014D826E37F5}
 		{DE855984-0983-4489-B78C-726D92FE6DEB} = {9CBD6867-49FB-40E4-AFF1-04438A71439A}
 		{85BC25FA-F984-43E0-8440-DFD52CD81101} = {C9AF0279-CDD7-484D-8EB4-CED34636BDC1}
-		{42E6245D-B750-45CF-B86D-FB356BC5B159} = {C9AF0279-CDD7-484D-8EB4-CED34636BDC1}
 		{37F78A8D-6F6A-447A-92D5-99AA993135E2} = {2FE9EBBC-4521-4BD2-B240-467DE2EB30F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

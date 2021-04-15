@@ -28,9 +28,15 @@ namespace Brightskies.Restaurant.Application.Reservations.Queries.GetAll
         {
             try
             {
-                var reservations = await _context.Reservations.Include(a => a.User).Include(a => a.MenuSelections).ToListAsync();
+                var reservations = await _context.Reservations
+                    .Include(a => a.User)
+                    .Include(a => a.MenuSelections)
+                    .ThenInclude(a=>a.Item)
+                    .ToListAsync();
 
-                return _mapper.Map<List<ReservationDto>>(reservations);
+                var result = _mapper.Map<List<ReservationDto>>(reservations);
+                
+                return result;
             }
             catch (System.Exception ex)
             {

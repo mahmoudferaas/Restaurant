@@ -11,6 +11,7 @@ namespace Brightskies.Restaurant.Application.Reservations.Dtos
         public string SpecialRequest { get; set; }
         public int UserId { get; set; }
         public UserDto User { get; set; }
-        public List<ItemDto> Items { get; set; }
+        public List<MenuSelectionDto> MenuSelections { get; set; }
+        //public List<ItemDto> Items { get; set; }
     }
 }
