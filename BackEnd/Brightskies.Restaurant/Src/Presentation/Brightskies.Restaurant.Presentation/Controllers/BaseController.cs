@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace Brightskies.Restaurant.Presentation.Controllers
 {
 	[Authorize]
+	[Route("api/[controller]")]
 	public class BaseController : ControllerBase
 	{
 		private readonly IMediator _mediator;
