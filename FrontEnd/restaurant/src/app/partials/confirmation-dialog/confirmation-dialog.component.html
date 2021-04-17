@@ -1,0 +1,18 @@
+<div class="col-xl-12">
+    <div class="col-xl-12">
+        <br />
+        <h1 mat-dialog-title class="mb-0">Confirmation</h1>
+        <hr class="w-100"/>
+        <div mat-dialog-content>
+            <p>Are you sure you want to {{data.action }}
+                <b>{{data.name}}</b> ?</p>
+        </div>
+        <div mat-dialog-actions>
+            <button mat-raised-button color="primary" class="ml-auto" (click)="sendResult(1)">Yes</button>
+            <button mat-raised-button
+                    (click)="sendResult(0)">No
+            </button>
+        </div>
+        <br />
+    </div>
+</div>

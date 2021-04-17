@@ -1,0 +1,13 @@
+<div *ngIf="reservationManager.requestDetails" class="card card-custom card-stretch gutter-b">
+    <!-- Header -->
+    <div class="card-header border-0 mt-4 d-flex flex-row">
+        <div class="col align-self-center">
+            <h3 class="card-title row mx-0 mb-3">
+                <span class="card-label font-weight-bolder text-dark">{{reservationManager.requestDetails.name}}</span>
+            </h3>
+            <h5 class="card-subtitle row m-0">
+                {{reservationManager.requestDetails.phone}}
+            </h5>
+        </div>
+    </div>
+</div>
