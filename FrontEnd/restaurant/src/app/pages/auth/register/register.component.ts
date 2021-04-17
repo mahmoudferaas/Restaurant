@@ -30,6 +30,7 @@ export class RegisterComponent implements OnInit {
 submit() {
   this.authService.register(this.registarForm.value).subscribe((data : any)=>{
       localStorage.setItem('token',data.token);
+      localStorage.setItem('userId',data.id);
       this.router.navigate(['/home']);
     },
     (err : HttpErrorResponse)=>{

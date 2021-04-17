@@ -12,8 +12,8 @@ export class ReservationService {
     constructor(private http: HttpClient) {
     }
 
-    list(queryParams) {
-        return this.http.get(this.apiUrl + 'requests/list' + queryParams);
+    list() {
+        return this.http.get(this.apiUrl + 'GetAllReservations' );
     }
 
     get(requestId) {

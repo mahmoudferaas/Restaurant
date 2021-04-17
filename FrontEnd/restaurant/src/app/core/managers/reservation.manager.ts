@@ -23,7 +23,7 @@ export class ReservationManager {
     list(currentPage = 1, perPage = this.pageSize) {
         this.loading = true;
         const queryParams = 'pagenumber=' + currentPage + '&pagesize=' + perPage;
-        this.reservationService.list(queryParams).subscribe((response: PaginatedResponseModel) => {
+        this.reservationService.list().subscribe((response: PaginatedResponseModel) => {
             this.apiResponse = response;
             this.requestsList = this.apiResponse.data;
             this.total = this.apiResponse.totalCount;

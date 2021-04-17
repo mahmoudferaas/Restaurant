@@ -8,21 +8,20 @@
     <!-- Body -->
     <div class="card-body pt-8">
         <div class="example-container mat-elevation-z8">
-            <mat-table [dataSource]="reservationManager.requestsList">
+            <mat-table [dataSource]="reservations">
                 <!-- Name Column -->
-                <ng-container matColumnDef="name">
-                    <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
-                    <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+                <ng-container matColumnDef="numberOfGuests">
+                    <mat-header-cell *matHeaderCellDef> Number Of Guests</mat-header-cell>
+                    <mat-cell *matCellDef="let row"> {{row.numberOfGuests}} </mat-cell>
                 </ng-container>
                 <!-- Phone Column -->
-                <ng-container matColumnDef="phone">
-                    <mat-header-cell *matHeaderCellDef> Phone</mat-header-cell>
-                    <mat-cell *matCellDef="let row"> {{row.phone}} </mat-cell>
+                <ng-container matColumnDef="reservationDate">
+                    <mat-header-cell *matHeaderCellDef> Reservation Date</mat-header-cell>
+                    <mat-cell *matCellDef="let row"> {{row.reservationDate }} </mat-cell>
                 </ng-container>
-                <!-- Date Column -->
-                <ng-container matColumnDef="date">
-                    <mat-header-cell *matHeaderCellDef> Date</mat-header-cell>
-                    <mat-cell *matCellDef="let row"> {{row.date | date}} </mat-cell>
+                <ng-container matColumnDef="specialRequest">
+                    <mat-header-cell *matHeaderCellDef> Special Request</mat-header-cell>
+                    <mat-cell *matCellDef="let row"> {{row.specialRequest}} </mat-cell>
                 </ng-container>
                 <!-- Actions Column -->
                 <ng-container matColumnDef="actions">
@@ -36,13 +35,6 @@
                 <mat-row *matRowDef="let row; columns: displayedColumns;">
                 </mat-row>
             </mat-table>
-            <mat-paginator
-                    [length]="reservationManager.total"
-                    [pageSizeOptions]="[10, 25, 50, 100]"
-                    [pageSize]="reservationManager.pageSize"
-                    (page)="reservationManager.pageChange($event)"
-            >
-            </mat-paginator>
         </div>
     </div>
 </div>

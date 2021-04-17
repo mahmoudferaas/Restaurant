@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReservationService } from 'src/app/core/services/reservation.service';
 import {ReservationManager} from '../../../core/managers/reservation.manager';
 
 @Component({
@@ -7,10 +8,15 @@ import {ReservationManager} from '../../../core/managers/reservation.manager';
   styleUrls: ['./requests-list.component.scss']
 })
 export class RequestsListComponent implements OnInit {
-  displayedColumns = ['name', 'phone', 'date', 'actions'];
+  displayedColumns = ['numberOfGuests', 'reservationDate', 'specialRequest', 'actions'];
+ reservations : any [];
 
-  constructor(public reservationManager: ReservationManager) {
+  constructor(public reservationService: ReservationService) {
   }
   ngOnInit(): void {
+   this.reservationService.list().subscribe((data : any) => {
+     debugger
+      this.reservations = data;
+    });
   }
 }

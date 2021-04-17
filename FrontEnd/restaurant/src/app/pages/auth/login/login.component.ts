@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
     submit() {
         this.authService.login(this.loginForm.value).subscribe((data : any)=>{
             localStorage.setItem('token',data.token);
+            localStorage.setItem('userId',data.id);
             this.router.navigate(['/home']);
           },
           (err : HttpErrorResponse)=>{
