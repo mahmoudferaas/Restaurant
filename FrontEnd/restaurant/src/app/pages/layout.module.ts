@@ -23,6 +23,10 @@ import {ListComponent} from '../partials/list/list.component';
 import {ConfirmationDialogComponent} from '../partials/confirmation-dialog/confirmation-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
+import { HomeComponent } from './home/home.component';
+import { CreateReservationComponent } from './create-reservation/create-reservation.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,9 @@ import {MatButtonModule} from "@angular/material/button";
     AsideComponent,
     HeaderMenuComponent,
     ListComponent,
-    ConfirmationDialogComponent
+    ConfirmationDialogComponent,
+    HomeComponent,
+    CreateReservationComponent
   ],
     imports: [
         CommonModule,
@@ -50,6 +56,7 @@ import {MatButtonModule} from "@angular/material/button";
         SubheaderModule,
         MatDialogModule,
         MatButtonModule,
+      FormsModule, ReactiveFormsModule
     ],
   exports: [
     ListComponent

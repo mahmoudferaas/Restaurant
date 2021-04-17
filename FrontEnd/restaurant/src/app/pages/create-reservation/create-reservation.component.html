@@ -1,0 +1,35 @@
+<div class="card card-custom">
+    <!--begin::Form-->
+    <form [formGroup]="reservationForm">
+     <div class="card-body">
+      <div class="form-group row">
+       <label  class="col-2 col-form-label">Number Of Guests</label>
+       <div class="col-10">
+        <input class="form-control" type="text" placeholder="Number Of Guests" formControlName="numberOfGuests"/>
+       </div>
+      </div>
+      <div class="form-group row">
+       <label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
+       <div class="col-10">
+        <input class="form-control" type="datetime-local" formControlName="reservationDate" />
+       </div>
+      </div>
+      <div class="form-group row">
+        <label  class="col-2 col-form-label">Special Requests</label>
+        <div class="col-10">
+         <input class="form-control" type="text" placeholder="Special Requests" formControlName="specialRequests"/>
+        </div>
+       </div>
+     </div>
+     <div class="card-footer">
+      <div class="row">
+       <div class="col-2">
+       </div>
+       <div class="col-10">
+        <button type="submit" (click)="submit()" class="btn btn-success mr-2">Submit</button>
+        <button type="reset" class="btn btn-secondary">Cancel</button>
+       </div>
+      </div>
+     </div>
+    </form>
+   </div>

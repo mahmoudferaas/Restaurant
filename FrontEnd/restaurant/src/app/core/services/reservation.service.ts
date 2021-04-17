@@ -20,4 +20,8 @@ export class ReservationService {
         return this.http.get(this.apiUrl + 'requests/details?id=' + requestId);
     }
 
+    create(data) {
+        return this.http.post(this.apiUrl + 'requests/details?id=' , data);
+    }
+
 }

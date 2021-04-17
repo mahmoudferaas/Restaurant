@@ -36,11 +36,25 @@
                     </div>
 
                     <!--begin::Form-->
-                    <form class="form" [formGroup]="loginForm" autocomplete="off" novalidate="novalidate" id="kt_login_form">
+                    <form class="form" [formGroup]="registarForm" autocomplete="off" novalidate="novalidate" id="kt_login_form">
+                        <div class="form-group">
+                            <mat-form-field>
+                                <mat-label>Name</mat-label>
+                                <input matInput type="name" placeholder="Name" formControlName="name"
+                                       autocomplete="off" />
+                            </mat-form-field>
+                        </div>
                         <div class="form-group">
                             <mat-form-field>
                                 <mat-label>Email</mat-label>
                                 <input matInput type="email" placeholder="Email" formControlName="email"
+                                       autocomplete="off" />
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field>
+                                <mat-label>MobileNumber</mat-label>
+                                <input matInput type="mobileNumber" placeholder="MobileNumber" formControlName="mobileNumber"
                                        autocomplete="off" />
                             </mat-form-field>
                         </div>
@@ -55,9 +69,7 @@
                         <div class="form-group d-flex flex-wrap justify-content-between align-items-center">
                             <button id="kt_login_signin_submit" (click)="submit()" [ngClass]="{
             'spinner spinner-right spinner-md spinner-light': loading
-          }" class="btn btn-primary font-weight-bold px-9 py-4 my-3">Login</button>
-
-          <a routerLink="../register" class="btn btn-link">Register</a>
+          }" class="btn btn-primary font-weight-bold px-9 py-4 my-3">Registar</button>
                         </div>
                         <!--end::Action-->
                     </form>
