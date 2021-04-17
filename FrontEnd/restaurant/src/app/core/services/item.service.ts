@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ItemService {
-  apiUrl = environment.apiUrl;
+  apiUrl = environment.apiUrl+'Items/';
   constructor(private http: HttpClient) { }
 
   getItems() {

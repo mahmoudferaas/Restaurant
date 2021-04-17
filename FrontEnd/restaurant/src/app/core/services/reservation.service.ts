@@ -7,7 +7,7 @@ import {environment} from '../../../environments/environment';
 })
 
 export class ReservationService {
-    apiUrl = environment.apiUrl;
+    apiUrl = environment.apiUrl+'Reservations/';
 
     constructor(private http: HttpClient) {
     }
@@ -17,11 +17,11 @@ export class ReservationService {
     }
 
     get(requestId) {
-        return this.http.get(this.apiUrl + 'requests/details?id=' + requestId);
+        return this.http.get(this.apiUrl + 'GetById?id=' + requestId);
     }
 
     create(data) {
-        return this.http.post(this.apiUrl + 'requests/details?id=' , data);
+        return this.http.post(this.apiUrl + 'CreateReservation' , data);
     }
 
 }
